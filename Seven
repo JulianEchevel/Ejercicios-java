@@ -1,0 +1,29 @@
+/**
+ * Ejercicio 7
+ * Autor: Julián Eliceo Echevel Avila
+ */
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int cantidad = 0;
+        double suma = 0;
+        double numero;
+
+        do {
+            System.out.print("Ingrese un número positivo (negativo para terminar): ");
+            numero = sc.nextDouble();
+            if (numero >= 0) {
+                cantidad++;
+                suma += numero;
+            }
+        } while (numero >= 0);
+
+        System.out.println("Cantidad de números ingresados: " + cantidad);
+        System.out.println("Suma total: " + suma);
+
+        sc.close();
+    }
+}
